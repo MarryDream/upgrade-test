@@ -1,5 +1,5 @@
 import { definePlugin } from "@/modules/plugin";
-import { lodash } from "@/modules/lodash";
+import lodash from "lodash";
 
 export default definePlugin( {
 	name: "测试测试",
