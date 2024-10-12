@@ -1,4 +1,5 @@
 import { definePlugin } from "@/modules/plugin";
+import log4js from "log4js";
 import lodash from "lodash";
 
 export default definePlugin( {
@@ -10,8 +11,9 @@ export default definePlugin( {
 		ref: "master"
 	},
 	mounted() {
+		const logger = log4js.getLogger( "test-test" );
 		lodash.forEach( [ 1, 2, 3 ], ( value ) => {
-			console.log( value );
+			logger.info( value );
 		} );
 	},
 } );
